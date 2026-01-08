@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox style="-fx-background-color: #0b449b;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.databasefinal.OrdersController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="418.0" prefWidth="652.0" style="-fx-background-color: #0b449b;" VBox.vgrow="ALWAYS">
+            <children>
+                <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="-4.0" text="Orders Menu" textAlignment="CENTER" textFill="WHITE" underline="true">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="ordersTable" layoutX="57.0" layoutY="161.0" prefHeight="200.0" prefWidth="527.0">
+                    <columns>
+                        <TableColumn fx:id="orderIdCol" prefWidth="75.0" text="Order ID" />
+                        <TableColumn fx:id="customerNameCol" prefWidth="75.0" text="Cust. Name" />
+                        <TableColumn fx:id="orderDateCol" prefWidth="75.0" text="Order Date" />
+                        <TableColumn fx:id="employeeNameCol" prefWidth="75.0" text="Emp. Name" />
+                        <TableColumn fx:id="orderTypeCol" prefWidth="75.0" text="Order Type" />
+                        <TableColumn fx:id="gameTitleCol" prefWidth="75.0" text="Game" />
+                        <TableColumn fx:id="totalAmountCol" prefWidth="75.0" text="Total" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="gameIdField" layoutX="81.0" layoutY="22.0" />
+                <TextField fx:id="customerIdField" layoutX="81.0" layoutY="62.0" />
+                <TextField fx:id="employeeIdField" layoutX="418.0" layoutY="22.0" />
+                <TextField fx:id="quantityField" layoutX="418.0" layoutY="83.0" />
+                <Label layoutX="27.0" layoutY="26.0" text="Game ID" textFill="WHITE" />
+                <Label layoutX="10.0" layoutY="66.0" prefHeight="17.0" prefWidth="67.0" text="Customer ID" textFill="WHITE" />
+                <Label layoutX="14.0" layoutY="109.0" text="Order Date" textFill="WHITE" />
+                <Label layoutX="348.0" layoutY="26.0" text="Employee ID" textFill="WHITE" />
+                <Label layoutX="351.0" layoutY="57.0" text="Order Type" textFill="WHITE" />
+                <Label layoutX="369.0" layoutY="87.0" text="Quantiy" textFill="WHITE" />
+                <Button fx:id="insButton" layoutX="244.0" layoutY="123.0" mnemonicParsing="false" onAction="#insertOrder" style="-fx-background-color: #1abc9c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 8 16; -fx-cursor: hand;" text="Register Order">
+                </Button>
+                <Button fx:id="hubButton" layoutX="578.0" layoutY="-1.0" mnemonicParsing="false" onAction="#openHub" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 8, 0.0, 0, 4);" text="Hub">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ComboBox fx:id="orderTypeCombo" layoutX="418.0" layoutY="53.0" prefWidth="150.0" />
+                <DatePicker fx:id="orderDatePicker" layoutX="81.0" layoutY="105.0" prefHeight="25.0" prefWidth="149.0" />
+                <ImageView fitHeight="105.0" fitWidth="108.0" layoutX="248.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="file:/C:/Users/Owner/Downloads/GameVaultLogo.PNG" />
+                    </image>
+                </ImageView>
+            <Label layoutX="370.0" layoutY="103.0" prefHeight="30.0" prefWidth="67.0" text="Payment" textFill="WHITE" />
+            <Label layoutX="376.0" layoutY="125.0" text="Type" textFill="WHITE" />
+            <ComboBox fx:id="paymentMethodCombo" layoutX="418.0" layoutY="113.0" prefWidth="150.0" />
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </AnchorPane>
+    </children>
+</VBox>

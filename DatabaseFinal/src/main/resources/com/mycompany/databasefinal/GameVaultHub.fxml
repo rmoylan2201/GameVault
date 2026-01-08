@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.databasefinal.GameVaultHubController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #0b449b;" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox alignment="CENTER" prefHeight="375.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label fx:id="titleLabel" alignment="TOP_CENTER" text=" GameVault Management System" textFill="WHITE" underline="true">
+                            <font>
+                                <Font name="System Bold Italic" size="28.0" />
+                            </font>
+                        </Label>
+                        <HBox fx:id="menuBox" alignment="TOP_CENTER" prefHeight="246.0" prefWidth="479.0" spacing="10.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="137.0" spacing="35.0">
+                                    <children>
+                                        <Label text="Customer Management" textFill="WHITE" textOverrun="CLIP" underline="true" />
+                                        <Button fx:id="manageCustomersButton" mnemonicParsing="false" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 10 20 10 20; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);" text="Manage Customers" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <ImageView fitHeight="118.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="file:/C:/Users/Owner/Downloads/GameVaultLogo.PNG" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="107.0" spacing="35.0">
+                                    <children>
+                                        <Label prefHeight="17.0" prefWidth="108.0" text="Games &amp; Inventory" textFill="WHITE" underline="true" />
+                                        <Button fx:id="viewGamesButton" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10 20 10 20; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);" text="View Games" textAlignment="CENTER" wrapText="true">
+                                 <font> 
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <Button fx:id="manageGamesButton" mnemonicParsing="false" style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-padding: 10 20 10 20; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);" text="Manage Games" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="107.0" spacing="35.0">
+                                    <children>
+                                        <Label prefHeight="17.0" prefWidth="91.0" text="Orders &amp; Rentals" textFill="WHITE" underline="true" />
+                                        <Button fx:id="manageOrdersButton" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-padding: 10 20 10 20; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2); -fx-wrap-text: true;" text="Manage Orders" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <Button fx:id="manageRentalsButton" mnemonicParsing="false" style="-fx-background-color: #9C27B0; -fx-text-fill: white; -fx-padding: 10 20 10 20; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2); -fx-wrap-text: true;" text="Manage Rentals" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>                           
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="35.0">
+                                    <children>
+                                        <Label alignment="TOP_CENTER" text="Payments" textFill="WHITE" underline="true" />
+                                        <Button fx:id="viewPaymentsButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: #8BC34A; -fx-padding: 10 20 10 20; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);" text="Payments" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                                        <ImageView fitHeight="118.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="file:/C:/Users/Owner/Downloads/GameVaultLogoOther.PNG" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </HBox>
+                        <Button fx:id="logoutButton" mnemonicParsing="false" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-padding: 10 20 10 20; -fx-font-size: 14px; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);" text="Log Out">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
